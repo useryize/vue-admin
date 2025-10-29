@@ -18,10 +18,12 @@ export default defineConfig({
     // 自动导入APi
     AutoImport({
       resolvers: [ElementPlusResolver()],
+      dts: './src/types/auto-import.d.ts',
     }),
     // 自动导入组件
     Components({
       resolvers: [ElementPlusResolver()],
+      dts: './src/types/components.d.ts',
     }),
   ],
   resolve: {
