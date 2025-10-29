@@ -1,1 +1,3 @@
-<template>home</template>
+<template>
+  <el-button>home</el-button>
+</template>
