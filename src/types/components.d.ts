@@ -12,7 +12,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElText: typeof import('element-plus/es')['ElText']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -21,7 +31,17 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const ElAside: typeof import('element-plus/es')['ElAside']
   const ElButton: typeof import('element-plus/es')['ElButton']
+  const ElContainer: typeof import('element-plus/es')['ElContainer']
+  const ElHeader: typeof import('element-plus/es')['ElHeader']
+  const ElIcon: typeof import('element-plus/es')['ElIcon']
+  const ElMain: typeof import('element-plus/es')['ElMain']
+  const ElMenu: typeof import('element-plus/es')['ElMenu']
+  const ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+  const ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
+  const ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+  const ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
   const ElText: typeof import('element-plus/es')['ElText']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
