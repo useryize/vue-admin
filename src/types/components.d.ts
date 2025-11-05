@@ -24,6 +24,9 @@ declare module 'vue' {
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElText: typeof import('element-plus/es')['ElText']
+    IEpHome: typeof import('~icons/ep/home')['default']
+    IEpHouse: typeof import('~icons/ep/house')['default']
+    IEpUnlock: typeof import('~icons/ep/unlock')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
@@ -43,6 +46,9 @@ declare global {
   const ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
   const ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
   const ElText: typeof import('element-plus/es')['ElText']
+  const IEpHome: typeof import('~icons/ep/home')['default']
+  const IEpHouse: typeof import('~icons/ep/house')['default']
+  const IEpUnlock: typeof import('~icons/ep/unlock')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
 }
