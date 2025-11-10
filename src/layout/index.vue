@@ -10,7 +10,6 @@
   </section>
 </template>
 <script setup lang="ts">
-
 import LayoutMain from './LayoutMain/index.vue'
 import LayoutMenu from './LayoutMenu/index.vue'
 import LayoutHeader from './LayoutHeader/index.vue'
