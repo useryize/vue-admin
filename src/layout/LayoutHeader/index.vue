@@ -16,6 +16,6 @@ const switchFold = () => {
 }
 
 const layouIcon = computed(() => {
-  return layoutFold.value ? Fold : Expand
+  return layoutFold.value ? Expand : Fold
 })
 </script>
