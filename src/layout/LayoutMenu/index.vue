@@ -1,17 +1,25 @@
 <template>
-  <section class="bg-[#fff]">
-    <div class="flex items-center px-[20px] pt-[10px]">
-      <el-avatar :size="16" :src="logo" />
-      <div class="text-[12px] text-[#666] font-bold ml-[10px]">管理平台</div>
-    </div>
-    <el-menu default-active="1" class="el-menu-vertical-demo" :collapse="isCollapse">
-      <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
-        <template #title>控制台</template>
-      </el-menu-item>
-    </el-menu>
-  </section>
+  <section
+    class="bg-[#fff] border border-[var(--el-menu-border-color)] transition-all duration-300 h-full flex flex-col"
+    :style="{ width: layouAutoWidth }">
 
+    <div
+      class="flex items-center pl-[23px] leading-none py-[10px] flex-shrink-0 transition-all duration-300 overflow-hidden">
+      <div class="flex items-center gap-[8px]">
+        <el-avatar :size="20" :src="logo" />
+        <span class="text-[16px]  font-semibold text-[#333] whitespace-nowrap" v-if="!isCollapse">管理平台</span>
+      </div>
+    </div>
+
+    <el-scrollbar class="flex-1">
+      <el-menu class=" !border-r-0" default-active="1" :collapse="isCollapse">
+        <el-menu-item :index="item?.id" class="!text-[14px]" v-for="(item, index) in layouMenu">
+          <el-icon><icon-menu /></el-icon>
+          <template #title><span class="truncate">{{ item?.name }}</span></template>
+        </el-menu-item>
+      </el-menu>
+    </el-scrollbar>
+  </section>
 </template>
 
 <script lang="ts" setup>
@@ -25,6 +33,12 @@ import { computed, ref } from 'vue';
 const layoutFold = useLayouStore()
 const isCollapse = computed(() => {
   return layoutFold.layoutFold
+})
+
+const layouMenu = ref(Array.from({ length: 20 }).map((_, index) => ({ name: '控制台', id: index + '' })))
+
+const layouAutoWidth = computed(() => {
+  return layoutFold.layoutFold ? '64px' : '150px'
 })
 </script>
 
