@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-icon class="cursor-pointer" @click="switchFold">
+    <el-icon size="18" class="cursor-pointer" @click="switchFold">
       <component :is="layouIcon"></component>
     </el-icon>
   </div>

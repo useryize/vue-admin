@@ -1,6 +1,5 @@
 <template>
-  <section
-    class="bg-[#fff] border border-[var(--el-menu-border-color)] transition-all duration-300 h-full flex flex-col"
+  <section class="bg-[#fff] border border-[#f1f1f1] transition-all duration-300 h-full flex flex-col"
     :style="{ width: layouAutoWidth }">
 
     <div
@@ -14,7 +13,7 @@
     <el-scrollbar class="flex-1">
       <el-menu class=" !border-r-0" default-active="1" :collapse="isCollapse">
         <el-menu-item :index="item?.id" class="!text-[14px]" v-for="(item, index) in layouMenu">
-          <el-icon><icon-menu /></el-icon>
+          <el-icon size="14"><icon-menu /></el-icon>
           <template #title><span class="truncate">{{ item?.name }}</span></template>
         </el-menu-item>
       </el-menu>
